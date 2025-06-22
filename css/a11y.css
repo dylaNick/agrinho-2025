@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-light: #f3f0ef;
+  --text-light: #202020;
+  --bg-dark: #202020;
+  --text-dark: #f3f0ef;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header-title {
+  padding: 1rem;
+  background-color: var(--bg-light);
+  transition: background-color 0.3s;
+}
+
+/* Esconde o checkbox de alternância */
+#theme-toggle,
+#font-default,
+#font-medium,
+#font-large {
+  display: none;
+}
+
+/* Quando o toggle está ativado (modo escuro) */
+#theme-toggle:checked ~ .page-wrapper {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+#theme-toggle:checked ~ .page-wrapper .header-title {
+  background-color: #202020;
+}
+
+/* Alternador visual */
+.theme-switcher {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+#font-medium:checked ~ .page-wrapper h1,
+#font-medium:checked ~ .page-wrapper p {
+  font-size: 1.9em;
+}
+
+#font-large:checked ~ .page-wrapper h1,
+#font-large:checked ~ .page-wrapper p {
+  font-size: 2.1em;
+}
+
+.accessibility {
+  position: relative;
+  margin-right: 50px;
+  margin-top: 0px;
+  margin-left: auto;
+
+  z-index: 0;
+  transition: margin-top 0.2s ease-in-out;
+}
+
+.accessibility:hover {
+  margin-top: 300px;
+}
+
+.accessibility img {
+  height: 200px;
+  width: 70px;
+}
+
+.accessibility-itens-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: -20px;
+}
+
+.toggle-theme {
+  position: absolute;
+  cursor: pointer;
+  height: 60px;
+  width: 35px;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.toggle-font {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  margin-top: 90px;
+}
+
+.toggle-font label {
+  cursor: pointer;
+  color: #f3f0ef;
+}

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/detail-page.css" />
     <link rel="stylesheet" href="../css/fonts.css" />
+    <link rel="stylesheet" href="../css/a11y.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
@@ -13,102 +14,132 @@
     <title>Cidade</title>
   </head>
   <body>
+    <input type="checkbox" id="theme-toggle" />
+    <input type="radio" name="font" id="font-default" checked />
+    <input type="radio" name="font" id="font-medium" />
+    <input type="radio" name="font" id="font-large" />
 
-    <header>
-      <a href="../index.html">
-        <img src="../img/house-icon.png" class="header-icon" alt="Imagem de uma casa preta." />
-      </a>
-      <div class="header-text">
-        <h1 class="bree-serif-regular">SUA ESCOLHA</h1>
-        <p class="lato-light">CELEBRANDO A CIDADE</p>
-        
-      </div>
-    </header>
-
-    <main>     
-
-      <div class="container">
-        <div class="container-fluid">
-          <section class="page-title">
-
-          <div class="horizontal-line"></div>
-
-            <h2 class="bree-serif-regular">CIDADE</h2>
-            <img src="../img/city/city-full.png" class="main-image" alt="imagem de cidade.">
-          </section>
-
-          <div class="horizontal-line"></div>
-
-          <section class="main-content">
-            <div class="text-section">
-              <h2 class="lato-bold">O QUE CARACTERIZA UMA CIDADE?</h2>
-              <p class="lato-light">
-                Uma cidade é um espaço com alta concentração de pessoas, 
-                infraestrutura desenvolvida e predominância de atividades 
-                econômicas do setor secundário (indústria) e terciário
-                (comércio e serviços). Ela se diferencia do campo pela 
-                verticalização das construções, pela presença de equipamentos
-                urbanos (como escolas, hospitais e transporte público) e
-                pelo ritmo acelerado do cotidiano. As cidades também funcionam 
-                como centros de decisão política, cultural e econômica.
-
-
-              </p>
-            </div>
-            <div class="text-section">
-              <h2 class="lato-bold">COMO SURGIRAM AS CIDADES?</h2>
-              <p class="lato-light">
-                As primeiras cidades surgiram na Antiguidade, com o crescimento
-                das sociedades agrícolas e a necessidade de organizar o comércio,
-                a administração e a religião em espaços centralizados. Com o tempo,
-                a urbanização se intensificou, especialmente após a Revolução Industrial, 
-                quando as cidades passaram a crescer rapidamente para abrigar fábricas e
-                trabalhadores. Esse processo continua até hoje, moldando o modo de vida 
-                moderno e transformando o espaço geográfico.
-              </p>
-            </div>
-            <div class="text-section">
-              <h2 class="lato-bold">QUAIS OS PRINCIPAIS PROBLEMAS URBANOS?</h2>
-              <p class="lato-light">
-                Entre os principais problemas enfrentados pelas cidades estão o 
-                trânsito intenso, a poluição do ar, a falta de moradia adequada,
-                o crescimento desordenado, a violência e a desigualdade social.
-                Muitos desses problemas surgem da falta de planejamento urbano e
-                da concentração excessiva de pessoas em áreas pequenas. Resolver 
-                essas questões exige políticas públicas eficientes, infraestrutura 
-                sustentável e participação da população nas decisões urbanas.
-              </p>
-            </div>
-            <div class="text-section">
-              <h2 class="lato-bold">QUAL A IMPORTÂNCIA DA CIDADE NA SOCIEDADE ATUAL?</h2>
-              <p class="lato-light">
-                A cidade é um polo de inovação, cultura, educação, saúde e economia. 
-                Ela conecta pessoas de diferentes origens, promove o desenvolvimento 
-                tecnológico e concentra oportunidades de emprego e acesso a serviços.
-                Por isso, as cidades são essenciais para o crescimento das sociedades 
-                modernas. No entanto, seu papel deve ser repensado constantemente para
-                garantir inclusão, qualidade de vida e sustentabilidade para todos os
-                seus habitantes.
-              </p>
-            </div>
-            <div class="text-section">
-              <h2 class="lato-bold">O QUE É A CIDADE SEM O CAMPO?</h2>
-              <p class="lato-light">
-                A cidade sem o campo é um espaço incompleto e insustentável. Isso porque
-                a cidade depende do campo para se abastecer de alimentos, água, energia 
-                e matérias-primas. Sem o campo, não há produção agrícola, nem recursos 
-                naturais suficientes para sustentar a população urbana. Além disso, o campo
-                contribui para o equilíbrio ambiental, o controle climático e até a
-                preservação de culturas e tradições. Portanto, por mais desenvolvida que seja,
-                a cidade não existe de forma autônoma — ela precisa do campo para funcionar,
-                crescer e garantir qualidade de vida à sua população.
-              </p>
-            </div>
-          </section>
+    <div class="page-wrapper">
+      <header>
+        <div class="header-title">
+          <a href="/">
+            <img src="../img/house-icon.png" class="header-icon" alt="" />
+          </a>
+          <div class="header-text">
+            <h3 class="bree-serif-regular">SUA ESCOLHA</h3>
+            <p class="lato-light">CELEBRANDO A CONEXÃO CAMPO-CIDADE</p>
+          </div>
         </div>
-      </div>
-    </main>
 
-    <footer class="footer"></footer>
+        <div class="accessibility">
+          <div class="accessibility-itens-wrapper">
+            <label class="toggle-theme" for="theme-toggle">🌙☀️</label>
+            <div class="toggle-font">
+              <label for="font-default">A</label>
+              <label for="font-medium">A+</label>
+              <label for="font-large">A++</label>
+            </div>
+            <div class="change-font" onclick="changeFontSize()"></div>
+          </div>
+          <img src="../img/bookmark.png" alt="" />
+        </div>
+      </header>
+
+      <main>
+        <div class="container">
+          <div class="container-fluid">
+            <section class="page-title">
+              <div class="horizontal-line"></div>
+              <h2 class="bree-serif-regular">CIDADE</h2>
+              <img
+                src="../img/city/city-full.png"
+                class="main-image"
+                alt="imagem de cidade."
+              />
+            </section>
+
+            <div class="horizontal-line"></div>
+
+            <section class="main-content">
+              <div class="text-section">
+                <h2 class="lato-bold">O QUE CARACTERIZA UMA CIDADE?</h2>
+                <p class="lato-light">
+                  Uma cidade é um espaço com alta concentração de pessoas,
+                  infraestrutura desenvolvida e predominância de atividades
+                  econômicas do setor secundário (indústria) e terciário
+                  (comércio e serviços). Ela se diferencia do campo pela
+                  verticalização das construções, pela presença de equipamentos
+                  urbanos (como escolas, hospitais e transporte público) e pelo
+                  ritmo acelerado do cotidiano. As cidades também funcionam como
+                  centros de decisão política, cultural e econômica.
+                </p>
+              </div>
+              <div class="text-section">
+                <h2 class="lato-bold">COMO SURGIRAM AS CIDADES?</h2>
+                <p class="lato-light">
+                  As primeiras cidades surgiram na Antiguidade, com o
+                  crescimento das sociedades agrícolas e a necessidade de
+                  organizar o comércio, a administração e a religião em espaços
+                  centralizados. Com o tempo, a urbanização se intensificou,
+                  especialmente após a Revolução Industrial, quando as cidades
+                  passaram a crescer rapidamente para abrigar fábricas e
+                  trabalhadores. Esse processo continua até hoje, moldando o
+                  modo de vida moderno e transformando o espaço geográfico.
+                </p>
+              </div>
+              <div class="text-section">
+                <h2 class="lato-bold">
+                  QUAIS OS PRINCIPAIS PROBLEMAS URBANOS?
+                </h2>
+                <p class="lato-light">
+                  Entre os principais problemas enfrentados pelas cidades estão
+                  o trânsito intenso, a poluição do ar, a falta de moradia
+                  adequada, o crescimento desordenado, a violência e a
+                  desigualdade social. Muitos desses problemas surgem da falta
+                  de planejamento urbano e da concentração excessiva de pessoas
+                  em áreas pequenas. Resolver essas questões exige políticas
+                  públicas eficientes, infraestrutura sustentável e participação
+                  da população nas decisões urbanas.
+                </p>
+              </div>
+              <div class="text-section">
+                <h2 class="lato-bold">
+                  QUAL A IMPORTÂNCIA DA CIDADE NA SOCIEDADE ATUAL?
+                </h2>
+                <p class="lato-light">
+                  A cidade é um polo de inovação, cultura, educação, saúde e
+                  economia. Ela conecta pessoas de diferentes origens, promove o
+                  desenvolvimento tecnológico e concentra oportunidades de
+                  emprego e acesso a serviços. Por isso, as cidades são
+                  essenciais para o crescimento das sociedades modernas. No
+                  entanto, seu papel deve ser repensado constantemente para
+                  garantir inclusão, qualidade de vida e sustentabilidade para
+                  todos os seus habitantes.
+                </p>
+              </div>
+              <div class="text-section">
+                <h2 class="lato-bold">O QUE É A CIDADE SEM O CAMPO?</h2>
+                <p class="lato-light">
+                  A cidade sem o campo é um espaço incompleto e insustentável.
+                  Isso porque a cidade depende do campo para se abastecer de
+                  alimentos, água, energia e matérias-primas. Sem o campo, não
+                  há produção agrícola, nem recursos naturais suficientes para
+                  sustentar a população urbana. Além disso, o campo contribui
+                  para o equilíbrio ambiental, o controle climático e até a
+                  preservação de culturas e tradições. Portanto, por mais
+                  desenvolvida que seja, a cidade não existe de forma autônoma —
+                  ela precisa do campo para funcionar, crescer e garantir
+                  qualidade de vida à sua população.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <h1 class="lato-light">A conexão começa com você!</h1>
+      </footer>
+    </div>
   </body>
 </html>

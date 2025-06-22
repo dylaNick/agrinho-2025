@@ -9,6 +9,12 @@
   transition: all 0.2s ease-in-out;
 }
 
+.page-title h2 {
+    margin: 0px;
+  padding: 0px;
+  font-size: 96px;
+}
+
 .page-title img:hover {
   scale: 1.05;
 }

@@ -5,114 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/a11y.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
     </style>
     <title>CONEXÃO CAMPO-CIDADE</title>
-    <script src="js/index.js"></script>
   </head>
   <body>
-    <header>
-      <div class="header-title">
-          <img src="./img/house-icon.png" class="header-icon" alt="" />
-        <div class="header-text">
-          <h3 class="bree-serif-regular">SUA ESCOLHA</h3>
-          <p class="lato-light">CELEBRANDO A CONEXÃO CAMPO-CIDADE</p>
+    <input type="checkbox" id="theme-toggle" />
+    <input type="radio" name="font" id="font-default" checked />
+    <input type="radio" name="font" id="font-medium" />
+    <input type="radio" name="font" id="font-large" />
+
+    <div class="page-wrapper">
+      <header>
+        <div class="header-title">
+          <a href="/">
+            <img src="../img/house-icon.png" class="header-icon" alt="" />
+          </a>
+          <div class="header-text">
+            <h3 class="bree-serif-regular">SUA ESCOLHA</h3>
+            <p class="lato-light">CELEBRANDO A CONEXÃO CAMPO-CIDADE</p>
+          </div>
         </div>
-      </div>
 
-      <div class="accessibility">
-        <div class="accessibility-itens-wrapper">
-          <div class="toggle-theme" onclick="toggleTheme()"></div>
-          <div class="change-font" onclick="changeFontSize()"></div>
+        <div class="accessibility">
+          <div class="accessibility-itens-wrapper">
+            <label class="toggle-theme" for="theme-toggle">🌙☀️</label>
+            <div class="toggle-font">
+              <label for="font-default">A</label>
+              <label for="font-medium">A+</label>
+              <label for="font-large">A++</label>
+            </div>
+            <div class="change-font" onclick="changeFontSize()"></div>
+          </div>
+          <img src="./img/bookmark.png" alt="" />
         </div>
-        <img src="./img/bookmark.png" alt="" />
-      </div>
-    </header>
+      </header>
 
-    <main>
-      <div class="container">
-        <div class="container-fluid">
-          <section class="page-title">
-            <h3 class="bree-serif-regular">VOCÊ SABIA?</h3>
-            <p class="lato-light">
-              O campo e a cidade são essenciais para o desenvolvimento econômico
-              e tecnológico da sociedade moderna, mas você sabe como que cada um
-              funciona, até chegar em você?
-            </p>
-          </section>
+      <main>
+        <div class="container">
+          <div class="container-fluid">
+            <section class="page-title">
+              <h3 class="bree-serif-regular">VOCÊ SABIA?</h3>
+              <p class="lato-light">
+                O campo e a cidade são essenciais para o desenvolvimento
+                econômico e tecnológico da sociedade moderna, mas você sabe como
+                que cada um funciona, até chegar em você?
+              </p>
+            </section>
 
-          <section class="main-buttons">
-            <div class="img-hover">
-              <a href="./html/city.html">
-                <img src="./img/homepage/city.png" alt="Cidade" />
-              </a>
-            </div>
-            <div class="img-hover">
-              <a href="./html/countryside.html">
-                <img src="./img/homepage/countryside.png" alt="Fazenda" />
-              </a>
-            </div>
-          </section>
+            <section class="main-buttons">
+              <div class="img-hover">
+                <a href="./html/city.html">
+                  <img src="./img/homepage/city.png" alt="Cidade" />
+                </a>
+              </div>
+              <div class="img-hover">
+                <a href="./html/countryside.html">
+                  <img src="./img/homepage/countryside.png" alt="Fazenda" />
+                </a>
+              </div>
+            </section>
 
-          <section class="main-content">
-            <h3 class="bree-serif-regular">CONEXÃO CAMPO-CIDADE</h3>
-            <div class="text-section">
-              <h2 class="lato-bold">O QUE É A CONEXÃO CAMPO-CIDADE?</h2>
-              <p class="lato-light">
-                A conexão cidade-campo é a relação de troca mútua e constante entre 
-                áreas urbanas e rurais. Essa ligação envolve o transporte de alimentos,
-                o fornecimento de insumos e tecnologias, o movimento de pessoas, a 
-                circulação de informações e os impactos ambientais compartilhados. Essa 
-                interação constrói um sistema social e econômico interdependente, em que 
-                um não sobrevive sem o outro. Entender essa conexão é essencial para pensar
-                o desenvolvimento de forma mais justa, equilibrada e sustentável.
-              </p>
-            </div>
-            <div class="text-section">
-              <h2 class="lato-bold">POR QUE O DESENVOLVIMENTO DE UM DEPENDE DO OUTRO?</h2>
-              <p class="lato-light">
-                O campo e a cidade são partes de um mesmo sistema, e seu desenvolvimento está 
-                interligado. O campo precisa da cidade para comercializar sua produção, ter acesso
-                à saúde, educação, máquinas agrícolas e crédito bancário. A cidade, por sua vez, 
-                depende do campo para seu abastecimento alimentar, fornecimento de água, energia e
-                matérias-primas. Quando um desses espaços enfrenta dificuldades, o outro também é 
-                impactado. Por isso, pensar políticas públicas e infraestrutura que conectem bem os
-                dois é essencial para garantir o bem-estar de toda a população.
-              </p>
-            </div>
-            <div class="text-section">
-              <h2 class="lato-bold">COMO O CAMPO E A CIDADE SE CONECTAM NO DIA A DIA DAS PESSOAS?</h2>
-              <p class="lato-light">
-                Mesmo sem perceber, estamos ligados ao campo e à cidade o tempo todo. Quando tomamos 
-                café da manhã, usamos produtos que vieram do campo (como leite, pão, frutas), mas que 
-                só chegaram até nós graças ao transporte, comércio e logística urbanos. Essa relação
-                também funciona no sentido contrário: tecnologias desenvolvidas nas cidades, como 
-                tratores modernos ou sistemas de irrigação, são levadas ao campo para melhorar a 
-                produção agrícola. O fluxo constante de bens, serviços e informações entre esses espaços
-                forma uma rede essencial para a vida cotidiana.
-              </p>
-            </div>
-            <div class="text-section">
-              <h2 class="lato-bold">O AVANÇO DAS CIDADES AMEAÇA O CAMPO?</h2>
-              <p class="lato-light">
-                Sim, especialmente quando ocorre de forma desordenada. A expansão urbana pode invadir
-                áreas rurais produtivas, desmatar regiões naturais, gerar poluição e causar conflitos 
-                por uso do solo. No entanto, com planejamento urbano adequado, é possível criar zonas 
-                de transição — como as franjas rurais-urbanas — que respeitam as funções do campo,
-                promovem sustentabilidade e reduzem os impactos ambientais. A integração responsável 
-                entre os dois espaços é fundamental para equilibrar crescimento urbano e preservação rural.
-              </p>
-            </div>
-            
-          </section>
+            <section class="main-content">
+              <h3 class="bree-serif-regular">CONEXÃO CAMPO-CIDADE</h3>
+              <div class="text-section">
+                <h2 class="lato-bold">O QUE É A CONEXÃO CAMPO-CIDADE?</h2>
+                <p class="lato-light">
+                  A conexão cidade-campo é a relação de troca mútua e constante
+                  entre áreas urbanas e rurais. Essa ligação envolve o
+                  transporte de alimentos, o fornecimento de insumos e
+                  tecnologias, o movimento de pessoas, a circulação de
+                  informações e os impactos ambientais compartilhados. Essa
+                  interação constrói um sistema social e econômico
+                  interdependente, em que um não sobrevive sem o outro. Entender
+                  essa conexão é essencial para pensar o desenvolvimento de
+                  forma mais justa, equilibrada e sustentável.
+                </p>
+              </div>
+              <div class="text-section">
+                <h2 class="lato-bold">
+                  POR QUE O DESENVOLVIMENTO DE UM DEPENDE DO OUTRO?
+                </h2>
+                <p class="lato-light">
+                  O campo e a cidade são partes de um mesmo sistema, e seu
+                  desenvolvimento está interligado. O campo precisa da cidade
+                  para comercializar sua produção, ter acesso à saúde, educação,
+                  máquinas agrícolas e crédito bancário. A cidade, por sua vez,
+                  depende do campo para seu abastecimento alimentar,
+                  fornecimento de água, energia e matérias-primas. Quando um
+                  desses espaços enfrenta dificuldades, o outro também é
+                  impactado. Por isso, pensar políticas públicas e
+                  infraestrutura que conectem bem os dois é essencial para
+                  garantir o bem-estar de toda a população.
+                </p>
+              </div>
+              <div class="text-section">
+                <h2 class="lato-bold">
+                  COMO O CAMPO E A CIDADE SE CONECTAM NO DIA A DIA DAS PESSOAS?
+                </h2>
+                <p class="lato-light">
+                  Mesmo sem perceber, estamos ligados ao campo e à cidade o
+                  tempo todo. Quando tomamos café da manhã, usamos produtos que
+                  vieram do campo (como leite, pão, frutas), mas que só chegaram
+                  até nós graças ao transporte, comércio e logística urbanos.
+                  Essa relação também funciona no sentido contrário: tecnologias
+                  desenvolvidas nas cidades, como tratores modernos ou sistemas
+                  de irrigação, são levadas ao campo para melhorar a produção
+                  agrícola. O fluxo constante de bens, serviços e informações
+                  entre esses espaços forma uma rede essencial para a vida
+                  cotidiana.
+                </p>
+              </div>
+              <div class="text-section">
+                <h2 class="lato-bold">O AVANÇO DAS CIDADES AMEAÇA O CAMPO?</h2>
+                <p class="lato-light">
+                  Sim, especialmente quando ocorre de forma desordenada. A
+                  expansão urbana pode invadir áreas rurais produtivas, desmatar
+                  regiões naturais, gerar poluição e causar conflitos por uso do
+                  solo. No entanto, com planejamento urbano adequado, é possível
+                  criar zonas de transição — como as franjas rurais-urbanas —
+                  que respeitam as funções do campo, promovem sustentabilidade e
+                  reduzem os impactos ambientais. A integração responsável entre
+                  os dois espaços é fundamental para equilibrar crescimento
+                  urbano e preservação rural.
+                </p>
+              </div>
+            </section>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <footer class="footer">
-      <h1 class="lato-light">A conexão começa com você!</h1>
-    </footer>
+      <footer class="footer">
+        <h1 class="lato-light">A conexão começa com você!</h1>
+      </footer>
+    </div>
   </body>
 </html>
